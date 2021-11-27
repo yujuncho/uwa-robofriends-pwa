@@ -20,8 +20,10 @@ describe("CounterButton", () => {
     expect(instanceCounterButton.state.count).toBe(1);
 
     wrapperCounterButton.find("button").simulate("click");
-
     expect(instanceCounterButton.state.count).toBe(2);
+
+    wrapperCounterButton.find("button").simulate("click");
+    expect(instanceCounterButton.state.count).toBe(3);
   });
 
   it("expects shouldComponentUpdate to be false when the count remains the same", () => {
